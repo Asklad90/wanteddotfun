@@ -1,0 +1,920 @@
+{
+  "contractAddress": "0x804f81d88e42e8a63ee419b3faf98d055d2255b8",
+  "network": "ARC-TESTNET",
+  "deployerWalletId": "3c2464b2-8369-52e2-a782-800bbeca5396",
+  "contract_code_path": "/home/user/app/contracts/WantedEscrow.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/WantedEscrow.sol/WantedEscrow.json",
+  "contract_network_and_links": {
+    "Arc Testnet": "https://explorer.testnet.arc.io/address/0x804f81d88e42e8a63ee419b3faf98d055d2255b8"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Arc Testnet",
+      "address": "0x804f81d88e42e8a63ee419b3faf98d055d2255b8",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0x804f81d88e42e8a63ee419b3faf98d055d2255b8",
+      "txHash": "0xc14385d94902a3bdc7d454574e222edc13b2f99964d8fbbe2f0469d78e6b20bd",
+      "deployedAt": "2026-10-12T05:59:20.455Z"
+    },
+    {
+      "chain": "Arc Testnet",
+      "address": "0xadfd672aade3bd34907154b07f995f0654169b6d",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0xadfd672aade3bd34907154b07f995f0654169b6d",
+      "txHash": "0xa7aac57f6664028f39ac8f50f18b824c17e956a5238e45a175bfffd2d175810b",
+      "deployedAt": "2026-10-11T23:14:28.635Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "usdc_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "reviewWindow_",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "approveWinner",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "submitter",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "cancel",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "claim",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "createBounty",
+      "inputs": [
+        {
+          "name": "title",
+          "type": "bytes",
+          "internalType": "bytes"
+        },
+        {
+          "name": "description",
+          "type": "bytes",
+          "internalType": "bytes"
+        },
+        {
+          "name": "rewardPerWinner",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "maxWinners",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "deadline",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getBountiesByPoster",
+      "inputs": [
+        {
+          "name": "poster",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBountiesBySubmitter",
+      "inputs": [
+        {
+          "name": "submitter",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBounty",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct WantedEscrow.Bounty",
+          "components": [
+            {
+              "name": "id",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "poster",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "title",
+              "type": "bytes",
+              "internalType": "bytes"
+            },
+            {
+              "name": "description",
+              "type": "bytes",
+              "internalType": "bytes"
+            },
+            {
+              "name": "rewardPerWinner",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "maxWinners",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "winnersApproved",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "deadline",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "escrowRemaining",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "reclaimedUnused",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBountyCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getEarnings",
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "paid",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "pending",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "wins",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getMyStatus",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "addr",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum WantedEscrow.MyStatus"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getPostedBounties",
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "offset",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "limit",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getSubmissions",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "offset",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "limit",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple[]",
+          "internalType": "struct WantedEscrow.Submission[]",
+          "components": [
+            {
+              "name": "id",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "submitter",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "bountyId",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "content",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getSubmittedBounties",
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "offset",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "limit",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "hasSubmitted",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "user",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "isWinner",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "user",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "payoutStatus",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "user",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum WantedEscrow.PayoutStatus"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "reclaimUnused",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "reviewWindow",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "submit",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "content",
+          "type": "bytes",
+          "internalType": "bytes"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "totalBounties",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "totalEscrowLocked",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "totalWinnersPaid",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "usdc",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "BountyCancelled",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "poster",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "refundAmount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BountyCreated",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "poster",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "title",
+          "type": "bytes",
+          "indexed": false,
+          "internalType": "bytes"
+        },
+        {
+          "name": "description",
+          "type": "bytes",
+          "indexed": false,
+          "internalType": "bytes"
+        },
+        {
+          "name": "rewardPerWinner",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "maxWinners",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "deadline",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "total",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "EscrowReclaimed",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "poster",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "PayoutPending",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "submitter",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RewardClaimed",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "submitter",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "WinnerPaid",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "submitter",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "WorkSubmitted",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "submissionId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "submitter",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "content",
+          "type": "bytes",
+          "indexed": false,
+          "internalType": "bytes"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AlreadyReclaimed",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AlreadySubmitted",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AlreadyWinner",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ApprovalWindowClosed",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BountyAlreadyCancelled",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BountyFull",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BountyNotFound",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BountyWasCancelled",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DeadlinePassedForSubmit",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DepositMismatch",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "HasSubmissions",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidContent",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidDeadline",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidDescription",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidMaxWinners",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidReward",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidTitle",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NotPendingPayout",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NotPoster",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NothingToReclaim",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PosterCannotSubmit",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyGuardReentrantCall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ReviewWindowActive",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "SafeERC20FailedOperation",
+      "inputs": [
+        {
+          "name": "token",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ZeroAddress",
+      "inputs": []
+    }
+  ]
+}

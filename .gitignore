@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.data/
+.env
+*.local
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+forge-cache/
